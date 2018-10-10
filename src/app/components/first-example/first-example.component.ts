@@ -27,4 +27,11 @@ export class FirstExampleComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickSimple(){
+    this.clickInfo = "clicked";
+    setTimeout( () => {
+      this.clickInfo = 'default'
+    }, 2000)
+  }
+
 }
