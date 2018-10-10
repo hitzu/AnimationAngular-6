@@ -1,5 +1,17 @@
-<div 
-(click) = "onClickSimple()"
-[@clickedState] = "clickInfo">
-  
+<div class="OnClick">
+    <p>OnClick</p>
+    <div 
+        (click) = "onClickSimple()"
+        [@clickedState] = "clickInfo">
+    </div>
 </div>
+
+
+<div class="OnMouseDown">
+        <p>OnMouseDown</p>
+        <div 
+            (mousedown) = "OnMouseDownSimple()"
+            (mouseup) = "OnMouseUpSimple()"
+            [@clickedState] = "mouseDownInfo">
+        </div>
+    </div>
