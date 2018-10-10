@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style } from '@angular/animations'
+import { trigger, state, style, transition, animate } from '@angular/animations'
 
 @Component({
   selector: 'app-first-example',
@@ -16,7 +16,9 @@ import { trigger, state, style } from '@angular/animations'
         backgroundColor: 'blue',
         width : '300px',
         height : '50px'
-      }))
+      })),
+      transition('default => clicked', animate('200ms 500ms ease-in')),
+      transition('clicked => default', animate('200ms 500ms ease-in'))
     ])
   ]
 })
